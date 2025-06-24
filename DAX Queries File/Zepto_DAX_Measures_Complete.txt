@@ -1,0 +1,420 @@
+% Failed Transactions = 
+DIVIDE([Failed Transactions], [Total Transactions])
+
+%_Sales = 
+SUMX(
+    'Orders', 
+    'Orders'[Qty] * RELATED('Products'[Price])
+) / 
+SUMX(
+    ALL('Orders'), 
+    'Orders'[Qty] * RELATED('Products'[Price])
+)
+
+
+Average_Discount_Rate = 
+AVERAGEX(
+    Orders,
+    Orders[Coupon_Discount] / 100
+)
+
+Average_Order_Value = 
+DIVIDE(
+    [Total_Amount_After_Discount],
+    DISTINCTCOUNT(Orders[Or_ID]),
+    0
+)
+
+Average_Transaction_Value = 
+DIVIDE([Total_Amount_After_Discount], COUNT(Transactions[TR_ID]), 0)
+
+Avg Product Price = AVERAGE(Products[Price])
+
+Avg_Age = ROUND(AVERAGE(Customers[Age]),0)
+
+Avg_Amount = AVERAGEX(Orders,Orders[Qty]*RELATED(Products[Price])*(1-Orders[Coupon_Discount]/100))
+
+Avg_Delivery_Rating_City = 
+AVERAGEX(RELATEDTABLE(Rating), Rating[Service_Rating])
+
+Avg_Discount = AVERAGEX(Orders,Orders[Coupon_Discount])/100
+
+Avg_Item_per_Trans = DIVIDE( SUM('Orders'[Qty]), COUNTROWS('Transactions'))
+
+Avg_Prod_Rating = AVERAGE(Ratings[Prod_Rating])
+
+Avg_Service_Rating = AVERAGE(Ratings[Service_Rating])
+
+Avg_Orders_Per_DP = 
+DIVIDE([Total_Orders], DISTINCTCOUNT(Delivery[DP_ID]))
+
+Category Wise Revenue = 
+SUMX(
+    Orders,
+    Orders[Qty] * RELATED(Products[Price])
+)
+
+Coupon_Usage = 
+CALCULATE(COUNTROWS(Orders), NOT(ISBLANK(Orders[Coupon])))
+
+Coupon_Usage_% = 
+DIVIDE([Coupon_Usage], [Total_Orders])
+
+Customer_CLTV = 
+SUMX(
+    VALUES(Customers[C_ID]),
+    CALCULATE(
+        SUMX(
+            Orders,
+            Orders[Qty] * RELATED(Products[Price]) * (1 - Orders[Coupon_Discount]/100)
+        ),
+        Orders[C_ID] = Customers[C_ID]
+    )
+)
+
+Customer_CLV = 
+CALCULATE(
+    SUMX(
+        RELATEDTABLE(Orders),
+        Orders[Qty] * RELATED(Products[Price])
+    )
+)
+
+Customer_Gender_Ratio = 
+DIVIDE(
+    CALCULATE(COUNTROWS(Customers), Customers[gender] = "Female"),
+    COUNTROWS(Customers)
+)
+
+
+Churn_Rate = 
+DIVIDE(COUNTROWS([Churned_Customers]), [Total_Customers])
+
+Churned_Customers = 
+EXCEPT(
+    VALUES(Customers[C_ID]),
+    CALCULATETABLE(
+        VALUES(Orders[C_ID]),
+        DATESINPERIOD(Orders[Order_Date], MAX(Orders[Order_Date]), -60, DAY)
+    )
+)
+
+
+COD_Orders = 
+CALCULATE(COUNTROWS(Orders), Orders[Payment_Method] = "COD")
+
+Discount_Effectiveness = DIVIDE(SUMX( FILTER(Orders,Orders[Coupon]<>"No Coupons"),Orders[Qty]*RELATED(Products[Price])),[Total_Amount_After_Discount] )
+
+
+
+Forecast_Sales_Next_Month = 
+CALCULATE(
+    [Total_Amount_After_Discount],
+    DATEADD(Orders[Order_Date], 1, MONTH)
+)
+
+First_Order_Month = 
+CALCULATE(MIN(Orders[Order_Date]), ALLEXCEPT(Orders, Orders[C_ID]))
+
+Failed_Transactions = 
+CALCULATE(COUNTROWS(Transactions), Transactions[Transaction_Status] = "Failed")
+
+High_Value_Customers = 
+CALCULATE(
+    COUNTROWS(VALUES(Customers[C_ID])),
+    FILTER(VALUES(Customers[C_ID]), [Customer_CLTV] > 5000)
+)
+
+Gender_Ratio_FM = DIVIDE([Female_Customers], [Male_Customers])
+
+Loss_trans_amt_prct = 
+ DIVIDE( SUMX(FILTER('Orders',CALCULATE(MAX('Transactions'[Transaction_Status]) <> "Success")),
+     'Orders'[Qty]*RELATED('Products'[Price])),SUMX(Orders,Orders[Qty]*RELATED(Products[Price])))
+
+Low Rated Orders = 
+CALCULATE(
+    COUNTROWS(Rating),
+    FILTER(Rating, Rating[Prod_Rating] <= 2)
+)
+
+
+
+Low_Margin_Products = 
+CALCULATE(
+    COUNTROWS(Products),
+    FILTER(Products, CALCULATE(AVERAGE(Orders[Coupon_Discount])) > 25)
+)
+
+MOM%_Sales = 
+DIVIDE([Total_Amount_After_Discount] - [Previous_Month_Sales], [Previous_Month_Sales])
+
+Most Ordered Product Name = 
+CALCULATE(
+    FIRSTNONBLANK(Products[PName], 1),
+    TOPN(
+        1,
+        SUMMARIZE(Orders, Orders[P_ID], "TotalQty", SUM(Orders[Qty])),
+        [TotalQty],
+        DESC
+    )
+)
+
+
+New_Customers_Monthly = 
+CALCULATE(
+    DISTINCTCOUNT(Customers[C_ID]),
+    FILTER(
+        ALL(Customers),
+        MONTH(Customers[created_date]) = MONTH(MAX(Customers[created_date])) &&
+        YEAR(Customers[created_date]) = YEAR(MAX(Customers[created_date]))
+    )
+)
+
+
+Orders by Delivery Partner = 
+COUNTROWS(SUMMARIZE(Orders, Orders[DP_ID]))
+
+
+Orders_Per_Customer = 
+DIVIDE([Total_Orders], [Total_Customers])
+
+
+Prepaid_Orders = 
+CALCULATE(COUNTROWS(Orders), Orders[Payment_Method] = "Prepaid")
+
+
+
+Previous_Month_Sales = 
+CALCULATE(
+    [Total_Amount_After_Discount],
+    PARALLELPERIOD(Orders[Order_Date], -1, MONTH)
+)
+
+
+
+Poor_Delivery_Experience = 
+CALCULATE(COUNTROWS(Ratings), Ratings[Service_Rating] <= 2)
+
+Poor_Delivery_% = 
+DIVIDE([Poor_Delivery_Experience], COUNTROWS(Ratings))
+
+
+
+Rolling_7_Day_Sales = 
+CALCULATE(
+    [Total_Amount_After_Discount],
+    DATESINPERIOD(Orders[Order_Date], MAX(Orders[Order_Date]), -7, DAY)
+)
+
+
+Repeat Customers = 
+CALCULATE(
+    DISTINCTCOUNT(Orders[C_ID]),
+    FILTER(
+        VALUES(Orders[C_ID]),
+        CALCULATE(COUNT(Orders[Or_ID])) > 1
+    )
+)
+
+Repeat_Purchase_Rate = 
+DIVIDE(
+    COUNTROWS(FILTER(Orders, Orders[C_ID] IN VALUES(Orders[C_ID]))), 
+    COUNTROWS(Customers),
+    0
+) 
+
+
+Revenue After Discount = 
+CALCULATE(
+    SUMX(
+        Orders,
+        Orders[Qty] * RELATED(Products[Price]) * (1 - Orders[Coupon_Discount]/100)
+    ),
+    USERELATIONSHIP(Orders[Or_ID], Transactions[OR_ID]),
+    Transactions[Transaction_Status] = "Success"
+)
+
+
+
+
+
+
+
+
+
+
+
+Revenue_Per_Customer = 
+DIVIDE([Total_Amount_After_Discount], [Total_Customers])
+
+
+
+Retained_Customers = 
+CALCULATE(
+    COUNTROWS(VALUES(Orders[C_ID])),
+    FILTER(VALUES(Orders[C_ID]), CALCULATE(DISTINCTCOUNT(Orders[Order_Date])) >= 2)
+)
+
+Retention_30_Days_% = 
+DIVIDE([Retained_Customers], [Total_Customers])
+
+
+
+
+
+
+
+
+
+Revenue_per_Product = DIVIDE([Total_Amount_After_Discount], SUM(Orders[Qty]), 0)
+
+
+Revenue_Per_Order = 
+DIVIDE([Total_Amount_After_Discount], [Total_Orders])
+
+
+
+Revenue_Per_Hour = DIVIDE([Total_Amount_After_Discount],DATEDIFF(MIN(Orders[Order_Date].[Date]),MAX(Orders[Order_Date].[Date]),HOUR),0)
+
+
+Revenue_With_Coupon = 
+SUMX(
+    FILTER(Orders, NOT(ISBLANK(Orders[Coupon]))),
+    Orders[Qty] * RELATED(Products[Price]) * (1 - Orders[Coupon_Discount]/100)
+)
+
+Revenue_Without_Coupon = 
+SUMX(
+    FILTER(Orders, ISBLANK(Orders[Coupon])),
+    Orders[Qty] * RELATED(Products[Price])
+)
+
+
+Return_Proxy_Count = 
+CALCULATE(COUNTROWS(Ratings), Ratings[Prod_Rating] <= 2)
+
+Return_Proxy_% = 
+DIVIDE([Return_Proxy_Count], [Total_Orders])
+
+Success_Trans_Revenue = 
+SUMX(
+    FILTER(Orders, RELATED(Transactions[Transaction_Status]) = "Success"),
+    Orders[Qty] * RELATED(Products[Price]) * (1 - Orders[Coupon_Discount]/100)
+)
+Slow_Moving_product = COUNTROWS(FILTER(Orders,Orders[Qty]<3))
+
+Success_Trans = COUNTROWS(FILTER(Transactions,Transactions[Transaction_Status]="Success"))
+
+Success_trans_amt = 
+ SUMX(FILTER('Orders',CALCULATE(MAX('Transactions'[Transaction_Status]) = "Success")),
+     'Orders'[Qty]*RELATED('Products'[Price]))
+
+Successful Transactions = 
+CALCULATE(COUNTROWS(Transactions), 
+    Transactions[Transaction_Status] = "Success")
+
+Successful_Transaction_Amount(Average) = 
+AVERAGEX( FILTER('Orders',CALCULATE( MAX('Transactions'[Transaction_Status]) = "Success")),
+     Orders[Qty]*RELATED(Products[Price]))
+
+Total Customers = DISTINCTCOUNT(Customers[C_ID])
+
+Total Discount Given = 
+SUMX(
+    Orders,
+    (Orders[Qty] * RELATED(Products[Price])) * (Orders[Coupon_Discount] / 100)
+)
+
+
+
+
+Total Products = COUNTROWS(Products)
+
+Total Revenue = 
+SUMX(
+    Orders,
+    Orders[Qty] * RELATED(Products[Price]) * (1 - Orders[Coupon_Discount] / 100)
+)
+
+
+Total Sales = 
+SUMX(
+    Orders,
+    Orders[Qty] * RELATED(Products[Price])
+)
+
+Total_Amount = SUMX(Orders,Orders[Qty]* RELATED(Products[Price]))
+
+
+
+Top_Selling_Products = 
+TOPN(
+    5,
+    ADDCOLUMNS(
+        VALUES(Products[P_ID]),
+        "TotalSold", CALCULATE(SUM(Orders[Qty]))
+    ),
+    [TotalSold], DESC
+)
+
+Top_Delivery_Partner_By_Rating = 
+TOPN(
+    1,
+    ADDCOLUMNS(
+        VALUES(Delivery[DP_name]),
+        "AvgRating", CALCULATE(AVERAGE(Ratings[Service_Rating]))
+    ),
+    [AvgRating], DESC
+)
+
+
+Top_20_Customer_Revenue = 
+CALCULATE(
+    [Total_Amount_After_Discount],
+    TOPN(
+        INT(0.2 * COUNTROWS(VALUES(Customers[C_ID]))),
+        VALUES(Customers[C_ID]),
+        [Customer_CLTV], DESC
+    )
+)
+
+Top_20_Contribution_% = 
+DIVIDE([Top_20_Customer_Revenue], [Total_Amount_After_Discount])
+
+Total_Orders = COUNTROWS(Orders)
+Total_Unique_Orders = 
+DISTINCTCOUNT(Orders[Or_ID])
+
+
+Transaction_Success_Rate = DIVIDE(COUNTROWS(FILTER(Transactions, Transactions[Transaction_Status] = "Success")),  COUNTROWS(Transactions)) 
+
+Total_Customers = DISTINCTCOUNT(Orders[C_ID])
+
+Total_Products_Sold = SUM(Orders[Qty])
+
+Total_Revenue = 
+SUMX(
+    Orders,
+    Orders[Qty] * RELATED(Products[Price])
+)
+
+Total_Discount = 
+SUMX(
+    Orders,
+    Orders[Qty] * RELATED(Products[Price]) * Orders[Coupon_Discount]/100
+)
+
+Total_Amount_After_Discount = 
+SUMX(
+    Orders,
+    Orders[Qty] * RELATED(Products[Price]) * (1 - Orders[Coupon_Discount]/100)
+)
+
+YOY_Sales = 
+CALCULATE(
+    [Total_Amount_After_Discount],
+    SAMEPERIODLASTYEAR(Orders[Order_Date])
+)
+
+YOY%_Growth = 
+DIVIDE([Total_Amount_After_Discount] - [YOY_Sales], [YOY_Sales])
