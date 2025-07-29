@@ -5,17 +5,17 @@ This project enables stakeholders to track critical metrics related to **sales, 
 ---
 ## 📌 2. Project Overview
 ###### This Power BI solution delivers a 5-page analytics dashboard focused on real-time delivery performance and customer analytics. The dashboard integrates data from 6 different tables:
-##### Sales
-##### Customers
-##### Transactions
-##### Products
-##### Overall
+- **Sales**
+- **Customers**
+- **Transactions**
+- **Products**
+- **Overall**
 
-###### The goal is to offer business users, analysts, and operations managers the ability to:
-###### Track sales, revenue, and customer behaviour
-###### Identify issues with transactions or deliveries
-###### Evaluate discount effectiveness
-###### Improve customer retention and delivery partner performance
+- The goal is to offer business users, analysts, and operations managers the ability to:
+- Track sales, revenue, and customer behaviour
+- Identify issues with transactions or deliveries
+- Evaluate discount effectiveness
+- Improve customer retention and delivery partner performance
 
 ---
 
