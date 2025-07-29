@@ -11,11 +11,11 @@ This project enables stakeholders to track critical metrics related to **sales, 
 - **Products**
 - **Overall**
 
-- The goal is to offer business users, analysts, and operations managers the ability to:
-- Track sales, revenue, and customer behaviour
-- Identify issues with transactions or deliveries
-- Evaluate discount effectiveness
-- Improve customer retention and delivery partner performance
+###### 🔹 The goal is to offer business users, analysts, and operations managers the ability to:
+###### 🔹 Track sales, revenue, and customer behaviour
+###### 🔹 Identify issues with transactions or deliveries
+###### 🔹 Evaluate discount effectiveness
+###### 🔹 Improve customer retention and delivery partner performance
 
 ---
 
