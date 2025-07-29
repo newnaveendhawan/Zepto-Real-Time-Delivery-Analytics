@@ -3,19 +3,30 @@ A Power BI dashboard that tracks Zepto’s 10-minute grocery delivery performanc
 This project enables stakeholders to track critical metrics related to **sales, customer retention, delivery performance, product demand**, and **transaction efficiency** using interactive visuals, advanced DAX measures, and a well-modelled dataset.
 
 ---
-## 📌 Project Overview
+## 🧭 Project Overview
 ###### This Power BI solution delivers a 5-page analytics dashboard focused on real-time delivery performance and customer analytics. The dashboard integrates data from 6 different tables:
-- **Sales**
-- **Customers**
-- **Transactions**
-- **Products**
-- **Overall**
+- Customers
+- Orders
+- Products
+- Transactions
+- Ratings
+- Delivery Partners
 
 ###### 🔹 The goal is to offer business users, analysts, and operations managers the ability to:
 ###### 🔹 Track sales, revenue, and customer behaviour
 ###### 🔹 Identify issues with transactions or deliveries
 ###### 🔹 Evaluate discount effectiveness
 ###### 🔹 Improve customer retention and delivery partner performance
+
+##### This dashboard offers an end-to-end view of Zepto’s business, covering:
+
+- 📦 **Order Analytics**
+- 👥 **Customer Behaviour and Segmentation**
+- 💳 **Transaction Success & Failure**
+- 🚚 **Delivery Partner Performance**
+- 🧾 **Product Performance**
+
+The solution is ideal for **business analysts, marketing teams, and operations managers** who want to gain insights and make data-driven decisions quickly.
 
 ---
 
@@ -26,20 +37,6 @@ This project enables stakeholders to track critical metrics related to **sales, 
 ###### ├── README.md # Project overview and instructions (this file)
 ###### ├──PDFs (all dashboard PDFs)
 ###### ├── Main Zepto Dashboard. pbix # Power BI dashboard with 6 interactive pages (in this readme file)
-
----
-
-## 🧭 Project Overview
-
-###### This dashboard offers an end-to-end view of Zepto’s business, covering:
-
-- 📦 **Order Analytics**
-- 👥 **Customer Behaviour and Segmentation**
-- 💳 **Transaction Success & Failure**
-- 🚚 **Delivery Partner Performance**
-- 🧾 **Product Performance**
-
-The solution is ideal for **business analysts, marketing teams, and operations managers** who want to gain insights and make data-driven decisions quickly.
 
 ---
 
