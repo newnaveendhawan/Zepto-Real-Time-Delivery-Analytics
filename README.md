@@ -93,6 +93,11 @@ The solution is ideal for **business analysts, marketing teams, and operations m
 
 ---
 
+## 📥 Data Source
+> You can download Dashboard from the [Google Drive](https://drive.google.com/drive/folders/1g7ZeETXVEeyHCXDPhXrX9jWTJ3WlYsq0?usp=drive_link)   
+> Original Dataset of this project [click here](https://drive.google.com/drive/folders/1Yyz848rLJicpaJlq08iCWdWuaOqh5iNi?usp=drive_link)
+---
+
 ## 📈 Target Users
 
 - **Business Analysts**
