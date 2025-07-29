@@ -1,5 +1,6 @@
 # 📊 Zepto-Real-Time-Delivery-Analytics
-<img width="3840" height="2160" alt="Cover Zepto" src="https://github.com/user-attachments/assets/857c1d27-1097-4b56-aac1-294ac87cf79b" />
+<img width="4560" height="2565" alt="Cover Zepto (1)" src="https://github.com/user-attachments/assets/60851d2b-3dd6-4ce7-9402-aef1172eee88" />
+
 
 A Power BI dashboard that tracks Zepto’s 10-minute grocery delivery performance across sales, customers, transactions, and delivery partners. It highlights key trends, top products, customer behaviour, and service quality — all in one place. Built for fast insights and smarter decisions.
 This project enables stakeholders to track critical metrics related to **sales, customer retention, delivery performance, product demand**, and **transaction efficiency** using interactive visuals, advanced DAX measures, and a well-modelled dataset.
@@ -86,6 +87,10 @@ The solution is ideal for **business analysts, marketing teams, and operations m
 
 ---
 
+## 🌐 Glimpse of Dashboard
+<img width="1372" height="718" alt="Sales Dashboard" src="https://github.com/user-attachments/assets/c83b8512-fc2f-4b5f-9da3-82cbd7f0d183" />
+
+---
 
 ## 📈 Target Users
 
