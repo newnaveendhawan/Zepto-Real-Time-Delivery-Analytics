@@ -20,10 +20,12 @@ This project enables stakeholders to track critical metrics related to **sales, 
 ---
 
 ## 📁 Project Structure
-###### ├── Main Zepto Dashboard. pbix # Power BI dashboard with 6 interactive pages
 ###### ├── Zepto_DAX_Measures_Complete.txt # Full list of DAX measures used
+###### ├── Images (All projects related images dashboards, icons, cover, dax, etc.)
 ###### ├── Zepto_Complete_Dataset.xlsx # Source data tables for Orders, Customers, etc.
 ###### ├── README.md # Project overview and instructions (this file)
+###### ├──PDFs (all dashboard PDFs)
+###### ├── Main Zepto Dashboard. pbix # Power BI dashboard with 6 interactive pages (in this readme file)
 
 ---
 
