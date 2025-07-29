@@ -85,10 +85,11 @@ The solution is ideal for **business analysts, marketing teams, and operations m
 
 > All data is simulated for project/demo purposes.
 
+
 ---
 
 ## 🌐 Glimpse of Dashboard
-<img width="1372" height="718" alt="Sales Dashboard" src="https://github.com/user-attachments/assets/c83b8512-fc2f-4b5f-9da3-82cbd7f0d183" />
+<img width="1156" height="649" alt="Overall Dashboard 2" src="https://github.com/user-attachments/assets/71c2111f-7214-4614-bf79-06cab7610929" />
 
 ---
 
