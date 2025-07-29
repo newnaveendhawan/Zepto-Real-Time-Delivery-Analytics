@@ -83,15 +83,6 @@ The solution is ideal for **business analysts, marketing teams, and operations m
 
 ---
 
-## 🛠️ Built With
-
-- [Power BI Desktop](https://powerbi.microsoft.com/)
-- DAX (Data Analysis Expressions)
-- Microsoft Excel (data source)
-- Relational Data Modelling
-
----
-
 ## 📦 Dataset Summary
 
 | Table | Description |
@@ -105,6 +96,16 @@ The solution is ideal for **business analysts, marketing teams, and operations m
 
 > All data is simulated for project/demo purposes.
 
+
+---
+
+
+## 🛠️ Built With
+
+- Power BI Desktop
+- DAX (Data Analysis Expressions)
+- Microsoft Excel (data source)
+- Relational Data Modelling
 
 ---
 
