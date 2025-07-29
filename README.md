@@ -4,6 +4,7 @@ This project enables stakeholders to track critical metrics related to **sales, 
 
 ---
 ## 🧭 Project Overview
+
 ###### This Power BI solution delivers a 5-page analytics dashboard focused on real-time delivery performance and customer analytics. The dashboard integrates data from 6 different tables:
 - Customers
 - Orders
