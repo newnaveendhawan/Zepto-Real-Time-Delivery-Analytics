@@ -39,12 +39,11 @@ The solution is ideal for **business analysts, marketing teams, and operations m
 
 | Page | Focus Area | Key Insights |
 |------|------------|--------------|
-| **1. Overview** | Sales & Customer KPIs | MoM growth, repeat/churned customer share |
-| **2. Product Performance** | Top/slow products, low margin items | 12 slow-moving products, 4 top SKUs |
-| **3. Discount Analysis** | Coupons, discount effectiveness | 53% orders with coupons, avg 16.3% discount |
-| **4. Delivery Performance** | Ratings, partners | Avg rating: 4.1, ~6.4% poor delivery rate |
-| **5. Transactions** | Success/failure % by mode | COD has 3x failure rate vs UPI |
-| **6. Segmentation** | CLTV, churn, top 20% | Top 20% customers generate ~44% revenue |
+| **1. Sales Analysis** | Sales, Orders & Customer KPIs | Growing MoM growth is inconsistent |
+| **2. Customer Analysis** | Customer CLTV, Customer Revenue, Repeated Orders | ~28% repeat, ~17% churned|
+| **3. Transaction Analysis** | Success Transactions %, Failed % | Wallet failure = 24% higer as compared to all  |
+| **4. Product Performance** | Revenue per Product, Rating |sold <3 units in 60+ days|
+| **5. Overall Analysis** | CLTV, churn, top 20% | Avg Discount Rate (16.3%), Top 20% drive 44% revenue |
 
 ---
 
@@ -84,17 +83,6 @@ The solution is ideal for **business analysts, marketing teams, and operations m
 
 ---
 
-## 🚀 Features
-
-- 80+ Advanced DAX Measures
-- YOY & MOM Growth Analysis
-- Coupon Impact Visualization
-- Customer Lifetime Value (CLTV)
-- Dynamic Segmentation (New, Repeat, Churned)
-- Transaction Mode Performance
-- Delivery Partner Ratings & Insights
-
----
 
 ## 📈 Target Users
 
