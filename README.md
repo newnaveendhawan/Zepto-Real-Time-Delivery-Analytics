@@ -3,7 +3,7 @@ A Power BI dashboard that tracks Zepto’s 10-minute grocery delivery performanc
 This project enables stakeholders to track critical metrics related to **sales, customer retention, delivery performance, product demand**, and **transaction efficiency** using interactive visuals, advanced DAX measures, and a well-modelled dataset.
 
 ---
-## 📌 2. Project Overview
+## 📌 Project Overview
 ###### This Power BI solution delivers a 5-page analytics dashboard focused on real-time delivery performance and customer analytics. The dashboard integrates data from 6 different tables:
 - **Sales**
 - **Customers**
