@@ -12,8 +12,8 @@ This project enables stakeholders to track critical metrics related to **sales, 
 - [📁 Project Structure](#-project-structure)
 - [📊 Dashboard Pages Overview](#-dashboard-pages-overview)
 - [💡 Key Business Insights (Validated)](#-key-business-insights-validated)
-- [🛠️ Built With](#-built-with)
-- [🛠️ Built With](#built-with)
+- [🧠 Built With](#-built-with)
+- [🧠 Built With](#built-with)
 - [📦 Dataset Summary](#-dataset-summary)
 - [🌐 Glimpse of Dashboard](#-glimpse-of-Dashboard)
 - [📥 Data Source](#-data-source)
@@ -100,7 +100,7 @@ The solution is ideal for **business analysts, marketing teams, and operations m
 ---
 
 
-## 🛠️ Built With
+## 🧠 Built With
 
 - Power BI Desktop
 - DAX (Data Analysis Expressions)
