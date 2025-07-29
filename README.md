@@ -52,11 +52,12 @@ The solution is ideal for **business analysts, marketing teams, and operations m
 - **Revenue grows steadily MoM**
 - **28% of customers are repeat buyers**, ~17% churned
 - **Top 20% of customers contribute ~44% revenue**
-- **Average Order Value:** ~₹296
+- **Avg Product Price:** ₹508
 - **Coupon Usage:** 53%, avg discount 16.3%
 - **Low-margin products correlate with high coupon use**
 - **COD failure rate ~11%**, UPI ~4%
-- **Delivery rating avg = 4.1**, ~6.4% rated poorly
+- **Delivery rating avg = 3.1**
+- **Revenue Without Coupons: ₹10,38,000**
 
 ---
 ## 🛠️ Built With
@@ -115,16 +116,21 @@ The solution is ideal for **business analysts, marketing teams, and operations m
 
 ## 📄 License
 
-This project is licensed under the **MIT License**.  
+This project is licensed under the [**MIT License**.](https://github.com/newnaveendhawan/Zepto-Real-Time-Delivery-Analytics/blob/main/LICENSE)  
 You are free to use, modify, and distribute it for personal or professional use with attribution.
 
+---
+
+## 👨‍💻 About the Author
+### Naveen Dhawan
+###### 🎓 BTech – NIT Warangal | Data Analyst | ML Enthusiast | Power BI & Python
 ---
 
 ## 📬 Contact
 
 For questions, improvements, or collaborations:  
-**[Your Name]**  
-Email: [your.email@example.com]  
-LinkedIn: [linkedin.com/in/yourprofile]
-
+###### 📧 newnaveendhawan@gmail.com
+###### [💼 LinkedIn](https://www.linkedin.com/in/newnaveendhawan/) 
+###### [📁 Portfolio](https://naveendhawanportfolio.blogspot.com/) 
 ---
+
