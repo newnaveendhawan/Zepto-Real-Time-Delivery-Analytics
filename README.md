@@ -12,12 +12,6 @@ This project enables stakeholders to track critical metrics related to **sales, 
 - Ratings
 - Delivery Partners
 
-###### 🔹 The goal is to offer business users, analysts, and operations managers the ability to:
-###### 🔹 Track sales, revenue, and customer behaviour
-###### 🔹 Identify issues with transactions or deliveries
-###### 🔹 Evaluate discount effectiveness
-###### 🔹 Improve customer retention and delivery partner performance
-
 ##### This dashboard offers an end-to-end view of Zepto’s business, covering:
 
 - 📦 **Order Analytics**
