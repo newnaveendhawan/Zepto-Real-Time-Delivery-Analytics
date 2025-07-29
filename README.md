@@ -3,27 +3,41 @@ A Power BI dashboard that tracks Zepto’s 10-minute grocery delivery performanc
 This project enables stakeholders to track critical metrics related to **sales, customer retention, delivery performance, product demand**, and **transaction efficiency** using interactive visuals, advanced DAX measures, and a well-modelled dataset.
 
 ---
+## 📌 2. Project Overview
+###### This Power BI solution delivers a 5-page analytics dashboard focused on real-time delivery performance and customer analytics. The dashboard integrates data from 6 different tables:
+##### Sales
+##### Customers
+##### Transactions
+##### Products
+##### Overall
+
+###### The goal is to offer business users, analysts, and operations managers the ability to:
+###### Track sales, revenue, and customer behaviour
+###### Identify issues with transactions or deliveries
+###### Evaluate discount effectiveness
+###### Improve customer retention and delivery partner performance
+
+---
 
 ## 📁 Project Structure
-├── Main Zepto Dashboard. pbix # Power BI dashboard with 6 interactive pages
-├── Zepto_DAX_Measures_Complete.txt # Full list of DAX measures used
-├── Zepto_Complete_Dataset.xlsx # Source data tables for Orders, Customers, etc.
-├── README.md # Project overview and instructions (this file)
+###### ├── Main Zepto Dashboard. pbix # Power BI dashboard with 6 interactive pages
+###### ├── Zepto_DAX_Measures_Complete.txt # Full list of DAX measures used
+###### ├── Zepto_Complete_Dataset.xlsx # Source data tables for Orders, Customers, etc.
+###### ├── README.md # Project overview and instructions (this file)
 
 ---
 
 ## 🧭 Project Overview
 
-This dashboard offers an end-to-end view of Zepto’s business, covering:
+###### This dashboard offers an end-to-end view of Zepto’s business, covering:
 
 - 📦 **Order Analytics**
 - 👥 **Customer Behaviour and Segmentation**
 - 💳 **Transaction Success & Failure**
-- 🎯 **Coupon and Discount Effectiveness**
 - 🚚 **Delivery Partner Performance**
 - 🧾 **Product Performance**
 
-The solution is ideal for **business analysts, marketing teams, and operations managers** who want to quickly gain insights and make data-driven decisions.
+The solution is ideal for **business analysts, marketing teams, and operations managers** who want to gain insights and make data-driven decisions quickly.
 
 ---
 
@@ -57,7 +71,7 @@ The solution is ideal for **business analysts, marketing teams, and operations m
 - [Power BI Desktop](https://powerbi.microsoft.com/)
 - DAX (Data Analysis Expressions)
 - Microsoft Excel (data source)
-- Relational Data Modeling
+- Relational Data Modelling
 
 ---
 
@@ -121,12 +135,6 @@ The solution is ideal for **business analysts, marketing teams, and operations m
 
 This project is licensed under the **MIT License**.  
 You are free to use, modify, and distribute it for personal or professional use with attribution.
-
----
-
-## 🙌 Acknowledgements
-
-Special thanks to Zepto and the data analytics community for inspiring real-time solutions that make insights actionable and fast.
 
 ---
 
