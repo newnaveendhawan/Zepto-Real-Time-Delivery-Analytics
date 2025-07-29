@@ -12,7 +12,7 @@ This project enables stakeholders to track critical metrics related to **sales, 
 - [📁 Project Structure](#-project-structure)
 - [📊 Dashboard Pages Overview](#-dashboard-pages-overview)
 - [💡 Key Business Insights (Validated)](#-key-business-insights-validated)
-- [🛠️ Built With](#built-with)
+- [🛠️ Built With](#-built-with)
 - [🛠️ Built With](#built-with)
 - [📦 Dataset Summary](#-dataset-summary)
 - [🌐 Glimpse of Dashboard](#-glimpse-of-Dashboard)
@@ -82,6 +82,7 @@ The solution is ideal for **business analysts, marketing teams, and operations m
 - **Revenue Without Coupons: ₹10,38,000**
 
 ---
+
 ## 🛠️ Built With
 
 - [Power BI Desktop](https://powerbi.microsoft.com/)
