@@ -8,7 +8,7 @@ This project enables stakeholders to track critical metrics related to **sales, 
 ---
 ## 📚 Table of Contents
 
-- [🧭 Project Overview](#-project-overview)
+- [🧭 Project ](#-project-overview)
 - [📁 Project Structure](#-project-structure)
 - [📊 Dashboard Pages Overview](#-dashboard-pages-overview)
 - [💡 Key Business Insights (Validated)](#-key-business-insights-validated)
