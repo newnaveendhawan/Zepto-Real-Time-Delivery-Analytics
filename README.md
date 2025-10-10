@@ -20,7 +20,7 @@ This project enables stakeholders to track critical metrics related to **sales, 
 - [📌 How to Use](#-how-to-use)
 - [🔮 Future Improvements](#-future-improvements)
 - [📃 License](#-license)
-- [🙋‍♂️ Author](#-about-the-author)
+- [🙋‍♂️ Author](#about-the-author)
 - [📬 Contact](#-contact)
 
 ---
