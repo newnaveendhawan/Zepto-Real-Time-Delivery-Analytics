@@ -8,7 +8,7 @@ This project enables stakeholders to track critical metrics related to **sales, 
 ---
 ## 📚 Table of Contents
 
-- [🧭 Project ](#-project-overview)
+- [🧭 Project Overview](#-project-overview)
 - [📁 Project Structure](#-project-structure)
 - [📊 Dashboard Pages Overview](#-dashboard-pages-overview)
 - [💡 Key Business Insights (Validated)](#-key-business-insights-validated)
@@ -157,7 +157,7 @@ You are free to use, modify, and distribute it for personal or professional use 
 
 ---
 
-## 👨‍💻 About the Author
+## About the Author
 ### Naveen Dhawan
 ###### 🎓 BTech – NIT Warangal | Data Analyst | ML Enthusiast | Power BI & Python
 ---
